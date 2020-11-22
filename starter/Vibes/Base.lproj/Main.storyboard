@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AJI-N1-623">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add-->
+        <scene sceneID="lwO-4X-WFs">
+            <objects>
+                <viewController storyboardIdentifier="AddStoryboardIdentifier" id="AJI-N1-623" customClass="CreateBeanieViewController" customModule="Vibes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cGG-v0-mOg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1LY-YH-gG2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="774"/>
+                                <color key="backgroundColor" name="rw-dark"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a photo from the library to view if it's Beanie or not." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgY-tm-smS">
+                                <rect key="frame" x="40" y="406.33333333333331" width="334" height="93.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" name="rw-light"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RBL-VY-y3k">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="bIt-7T-7Vz"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem image="camera.fill" catalog="system" id="9vK-rl-K0W">
+                                        <connections>
+                                            <action selector="selectPhotoPressed:" destination="AJI-N1-623" id="Y44-5Z-71d"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="N8n-3E-n4l"/>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ac-Rn-se0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="774"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Beanie or Not Beanie?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GEH-w9-Utb">
+                                <rect key="frame" x="16" y="736" width="382" height="62"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="54g-wA-HjY"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="A1Z-Lh-A4q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1LY-YH-gG2" firstAttribute="leading" secondItem="A1Z-Lh-A4q" secondAttribute="leading" id="3lX-QV-vJj"/>
+                            <constraint firstItem="RBL-VY-y3k" firstAttribute="leading" secondItem="1LY-YH-gG2" secondAttribute="leading" id="3tm-Mv-7Wa"/>
+                            <constraint firstItem="RBL-VY-y3k" firstAttribute="top" secondItem="4Ac-Rn-se0" secondAttribute="bottom" id="7Xa-9Q-1QU"/>
+                            <constraint firstItem="RBL-VY-y3k" firstAttribute="top" secondItem="GEH-w9-Utb" secondAttribute="bottom" constant="20" id="D6d-vZ-EL2"/>
+                            <constraint firstItem="4Ac-Rn-se0" firstAttribute="leading" secondItem="A1Z-Lh-A4q" secondAttribute="leading" id="Fvc-Qg-l77"/>
+                            <constraint firstItem="PgY-tm-smS" firstAttribute="leading" secondItem="A1Z-Lh-A4q" secondAttribute="leading" constant="40" id="GqP-fH-3rw"/>
+                            <constraint firstItem="RBL-VY-y3k" firstAttribute="bottom" secondItem="A1Z-Lh-A4q" secondAttribute="bottom" id="ICl-pD-r16"/>
+                            <constraint firstItem="1LY-YH-gG2" firstAttribute="top" secondItem="A1Z-Lh-A4q" secondAttribute="top" id="KZa-pn-6LA"/>
+                            <constraint firstItem="1LY-YH-gG2" firstAttribute="trailing" secondItem="A1Z-Lh-A4q" secondAttribute="trailing" id="Kie-Wc-rQo"/>
+                            <constraint firstItem="PgY-tm-smS" firstAttribute="centerY" secondItem="A1Z-Lh-A4q" secondAttribute="centerY" id="T7q-Ig-GDa"/>
+                            <constraint firstItem="A1Z-Lh-A4q" firstAttribute="trailing" secondItem="PgY-tm-smS" secondAttribute="trailing" constant="40" id="XQP-Wb-5gP"/>
+                            <constraint firstItem="GEH-w9-Utb" firstAttribute="leading" secondItem="A1Z-Lh-A4q" secondAttribute="leading" constant="16" id="eMg-dz-ah3"/>
+                            <constraint firstItem="RBL-VY-y3k" firstAttribute="trailing" secondItem="1LY-YH-gG2" secondAttribute="trailing" id="mGl-hb-dSW"/>
+                            <constraint firstItem="4Ac-Rn-se0" firstAttribute="top" secondItem="A1Z-Lh-A4q" secondAttribute="top" id="oTo-Ts-Jen"/>
+                            <constraint firstItem="RBL-VY-y3k" firstAttribute="top" secondItem="1LY-YH-gG2" secondAttribute="bottom" id="pzi-h9-YwH"/>
+                            <constraint firstItem="A1Z-Lh-A4q" firstAttribute="trailing" secondItem="GEH-w9-Utb" secondAttribute="trailing" constant="16" id="rEp-x6-dao"/>
+                            <constraint firstItem="A1Z-Lh-A4q" firstAttribute="trailing" secondItem="4Ac-Rn-se0" secondAttribute="trailing" id="uPX-x8-fPS"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add" image="plus.rectangle.fill" catalog="system" selectedImage="plus.rectangle.fill" id="8hm-xu-Ii5"/>
+                    <connections>
+                        <outlet property="beanieTextView" destination="GEH-w9-Utb" id="OMI-8z-QI1"/>
+                        <outlet property="imageView" destination="1LY-YH-gG2" id="h55-sH-z5j"/>
+                        <outlet property="starterLabel" destination="PgY-tm-smS" id="dxz-bz-1ED"/>
+                        <outlet property="stickerView" destination="4Ac-Rn-se0" id="SBb-ON-kgb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S8e-2c-4ts" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652.17391304347836" y="141.96428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MAS-1U-sON">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yho-Wc-YLh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Vrt-ld-5Il"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="67d-ld-bGT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zdc-H0-8EI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1421.5999999999999" y="142.57871064467767"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="plus.rectangle.fill" catalog="system" width="128" height="93"/>
+        <namedColor name="rw-dark">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="rw-light">
+            <color red="0.94901960784313721" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
